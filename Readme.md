@@ -73,13 +73,19 @@ into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 Result looks like this:
 ![Place kitten example](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/placekitten.png)
 
-On the same time you Photo Library will have additional file, but remember it looks completly different! Original file is flatten to `[1,width/3]` .bmp file so it doesn't have anything to do with original one:
+On the same time you Photo Library will have additional file, but remember it looks completly different! Original file is flatten to 1px-height .bmp file so it doesn't have anything to do with original one:
 
 ![Camera Roll representation](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/camera_roll.png)
 
-Althought you can debug your .bmp files if you store text inside them. Consider following snippet:
 
-```
+###Algorithm
+[BMP](http://en.wikipedia.org/wiki/BMP_file_format) is probably the simplest image format. All you need to know is that it consists of a header and then array of pixels. Each RGB pixel can have a value from range (0-255) so it can be represented as a byte. If we extract bytes from NSData and divide them into 3-component groups we can store each group as a single pixel!
+
+Each pixel is stored in a bitmap that has a `height=1` and `width=ceil(size/3)` and whole bitmap is saved in Camera Roll. As a result we get an assetURL we can use later to restore saved data.
+
+You can debug your .bmp files if you store text inside them. Consider following snippet:
+
+```objective-c
 - (void)testStringWritingAndReading
 {
     NSData *data = [@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." dataUsingEncoding:NSASCIIStringEncoding];
@@ -110,14 +116,7 @@ when open in hexfiend looks like this:
 ![hexfiend](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/hexfiend.png)
 
 As you see the whole text is stored inside, right after the header.
-We can extract it by just slicing `byte[]` array from a certain index to the end.
-
-###Algorithm
-[BMP](http://en.wikipedia.org/wiki/BMP_file_format) is probably the simplest image format. All you need to know is that it consists of a header and then array of pixels. Each RGB pixel can have a value from range (0-255) so it can be represented as a byte. If we extract bytes from NSData and divide them into 3-component groups we can store each group as a single pixel!
-
-Each pixel is stored in a bitmap that has a `height=1` and `width=ceil(size/3)` and whole bitmap is saved in Camera Roll. As a result we get an assetURL we can use later to restore saved data.
-
-That's it :)
+We can extract it by just slicing `byte[]` array from a certain index to the end and that's how Camouflage is doing it.
 
 
 ###libbmp dependency
