@@ -93,7 +93,7 @@ On the same time you Photo Library will have additional file, but remember it lo
 
 
 ###Algorithm
-[BMP](http://en.wikipedia.org/wiki/BMP_file_format) is probably the simplest image format. All you need to know is that it consists of a header and then array of pixels. Each RGB pixel can have a value from range (0-255) so it can be represented as a byte. If we extract bytes from NSData and divide them into 3-component groups we can store each group as a single pixel!
+[BMP](http://en.wikipedia.org/wiki/BMP_file_format) is probably the simplest image format. All you need to know is that it consists of a header and then array of pixels. Each single RGB element can have a value from range (0-255) so it can be represented as a byte. If we extract bytes from NSData and divide them into 3-component groups we can store each group as a single pixel!
 
 Each pixel is stored in a bitmap that has a `height=1` and `width=ceil(size/3)` and whole bitmap is saved in Camera Roll. As a result we get an assetURL we can use later to restore saved data.
 
