@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC33ABB8-4A5B-4B7B-BDDC-D9BEC0873369</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Camouflage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80EC5DCC-19AA-48D3-8534-989300853EDF</key>
+		<string>https://github.com/burczyk/Camouflage.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Camouflage.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80EC5DCC-19AA-48D3-8534-989300853EDF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/burczyk/Camouflage.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>80EC5DCC-19AA-48D3-8534-989300853EDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80EC5DCC-19AA-48D3-8534-989300853EDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Camouflage</string>
+		</dict>
+	</array>
+</dict>
+</plist>

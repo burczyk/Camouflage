@@ -19,6 +19,20 @@ First one stores data as .bmp file and returns `assetURL` of form `assets-librar
 
 Second one return stored data by given URL in completion block.
 
+###Use case
+**Share data between apps without sending it to the server!**
+
+Write NSData to Photo Library, get it's URL and pass it to other app by opening second app's specific URL with particular parameter, or just store a URL on the server, retrieve it in another app and open NSData written before from URL, e.g.:
+`assets-library://asset/asset.BMP?id=DAD5C945-B5EB-4D68-9FBC-D70081E95E01&ext=BMP`
+
+```objective-c
+[NSData dataFromBMPFileInCameraRollForURL:[NSURL URLWithString:@"assets-library://asset/asset.BMP?id=DAD5C945-B5EB-4D68-9FBC-D70081E95E01&ext=BMP"] withCompletion:^(NSData *data) {
+    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
+}];
+```                
+
+**You don't need to be root to share data between apps!**
+
 ###Installation
 Use [cocoapods](http://cocoapods.org/):
 

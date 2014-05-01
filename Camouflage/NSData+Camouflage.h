@@ -12,6 +12,6 @@
 
 - (void)writeToBMPFileInCameraRollWithCompletion:(void(^)(NSURL *assetURL))completion;
 
-+ (void)dataFromBMPFileInCameraRollForURL:(NSURL*)assetURL withCompletion:(void(^)(NSData*))completion;
++ (void)dataFromBMPFileInCameraRollForURL:(NSURL*)assetURL withCompletion:(void(^)(NSData *data))completion;
 
 @end

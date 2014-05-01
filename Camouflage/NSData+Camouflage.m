@@ -56,7 +56,7 @@
      ];
 }
 
-+ (void)dataFromBMPFileInCameraRollForURL:(NSURL*)assetURL withCompletion:(void(^)(NSData*))completion
++ (void)dataFromBMPFileInCameraRollForURL:(NSURL*)assetURL withCompletion:(void(^)(NSData *data))completion
 {
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library assetForURL:assetURL resultBlock:^(ALAsset *asset) {
@@ -67,6 +67,8 @@
             
             NSData *d = [[NSData alloc] initWithBytesNoCopy:bytes length:(NSInteger) repr.size freeWhenDone:NO];
             if (completion) completion([d subdataWithRange:NSMakeRange(122, d.length-122)]);
+        } else {
+            NSLog(@"Asset with URL: %@ not found", assetURL);
         }
     } failureBlock:^(NSError *error) {
         NSLog(@"Error while retrieving data for assetURL <%@> : %@", assetURL, error);
