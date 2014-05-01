@@ -39,7 +39,7 @@ into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 ###Sample project
 [CamouflageTest](https://github.com/burczyk/CamouflageTest) is a project that tests behavior of library, e.g.
 
-```
+```objective-c
 [data writeToBMPFileInCameraRollWithCompletion:^(NSURL *assetURL) {
     [NSData dataFromBMPFileInCameraRollForURL:assetURL withCompletion:^(NSData *data) {
         NSLog(@"data length after load from bmp: %d", data.length);
@@ -51,7 +51,7 @@ into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 ###Sample result
 `CamouflageTest` has e.g. this method that downloads image from URL, saves it as NSData, restores it and shows it on the screen:
 
-```
+```objective-c
 - (void)testImageWritingAndReading
 {
     //sorry for that, but synchronous call is simpler to show you the results
@@ -71,11 +71,11 @@ into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 ```
 
 Result looks like this:
-![]()
+![Place kitten example](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/placekitten.png)
 
 On the same time you Photo Library will have additional file, but remember it looks completly different! Original file is flatten to `[1,width/3]` .bmp file so it doesn't have anything to do with original one:
 
-![]()
+![Camera Roll representation](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/camera_roll.png)
 
 Althought you can debug your .bmp files if you store text inside them. Consider following snippet:
 
@@ -104,10 +104,10 @@ Images from iOS Simulator are stored in a path:
 If you run the code above and find the newest file you can open it with hex editor, e.g. [hexfiend](http://ridiculousfish.com/hexfiend/).
 
 My file which graphical representation looks like this:
-![]()
+![Camera roll example](IMG_0071.BMP)
 
 when open in hexfiend looks like this:
-![]()
+![hexfiend](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/hexfiend.png)
 
 As you see the whole text is stored inside, right after the header.
 We can extract it by just slicing `byte[]` array from a certain index to the end.
