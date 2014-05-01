@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E000EAC1912898D0092EBB7 /* NSData+Camouflage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E000EAB1912898D0092EBB7 /* NSData+Camouflage.m */; };
 		8E4A20B7190E4B0F00BBA986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4A20B6190E4B0F00BBA986 /* Foundation.framework */; };
-		8E4A20BC190E4B0F00BBA986 /* Camouflage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8E4A20BB190E4B0F00BBA986 /* Camouflage.h */; };
-		8E4A20BE190E4B0F00BBA986 /* Camouflage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A20BD190E4B0F00BBA986 /* Camouflage.m */; };
 		8E4A20C5190E4B0F00BBA986 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4A20C4190E4B0F00BBA986 /* XCTest.framework */; };
 		8E4A20C6190E4B0F00BBA986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4A20B6190E4B0F00BBA986 /* Foundation.framework */; };
 		8E4A20C8190E4B0F00BBA986 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4A20C7190E4B0F00BBA986 /* UIKit.framework */; };
 		8E4A20CB190E4B0F00BBA986 /* libCamouflage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4A20B3190E4B0F00BBA986 /* libCamouflage.a */; };
 		8E4A20D1190E4B0F00BBA986 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E4A20CF190E4B0F00BBA986 /* InfoPlist.strings */; };
 		8E4A20D3190E4B0F00BBA986 /* CamouflageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A20D2190E4B0F00BBA986 /* CamouflageTests.m */; };
+		8E4A20DE190E4D7100BBA986 /* bmpfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A20DC190E4D7100BBA986 /* bmpfile.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +35,25 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				8E4A20BC190E4B0F00BBA986 /* Camouflage.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E000EAA1912898D0092EBB7 /* NSData+Camouflage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Camouflage.h"; sourceTree = "<group>"; };
+		8E000EAB1912898D0092EBB7 /* NSData+Camouflage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Camouflage.m"; sourceTree = "<group>"; };
 		8E4A20B3190E4B0F00BBA986 /* libCamouflage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCamouflage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4A20B6190E4B0F00BBA986 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8E4A20BA190E4B0F00BBA986 /* Camouflage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Camouflage-Prefix.pch"; sourceTree = "<group>"; };
-		8E4A20BB190E4B0F00BBA986 /* Camouflage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camouflage.h; sourceTree = "<group>"; };
-		8E4A20BD190E4B0F00BBA986 /* Camouflage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Camouflage.m; sourceTree = "<group>"; };
 		8E4A20C3190E4B0F00BBA986 /* CamouflageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamouflageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4A20C4190E4B0F00BBA986 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8E4A20C7190E4B0F00BBA986 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8E4A20CE190E4B0F00BBA986 /* CamouflageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CamouflageTests-Info.plist"; sourceTree = "<group>"; };
 		8E4A20D0190E4B0F00BBA986 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E4A20D2190E4B0F00BBA986 /* CamouflageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CamouflageTests.m; sourceTree = "<group>"; };
+		8E4A20DC190E4D7100BBA986 /* bmpfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bmpfile.c; sourceTree = "<group>"; };
+		8E4A20DD190E4D7100BBA986 /* bmpfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmpfile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +111,10 @@
 		8E4A20B8190E4B0F00BBA986 /* Camouflage */ = {
 			isa = PBXGroup;
 			children = (
-				8E4A20BB190E4B0F00BBA986 /* Camouflage.h */,
-				8E4A20BD190E4B0F00BBA986 /* Camouflage.m */,
+				8E4A20DD190E4D7100BBA986 /* bmpfile.h */,
+				8E4A20DC190E4D7100BBA986 /* bmpfile.c */,
+				8E000EAA1912898D0092EBB7 /* NSData+Camouflage.h */,
+				8E000EAB1912898D0092EBB7 /* NSData+Camouflage.m */,
 				8E4A20B9190E4B0F00BBA986 /* Supporting Files */,
 			);
 			path = Camouflage;
@@ -224,7 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4A20BE190E4B0F00BBA986 /* Camouflage.m in Sources */,
+				8E4A20DE190E4D7100BBA986 /* bmpfile.c in Sources */,
+				8E000EAC1912898D0092EBB7 /* NSData+Camouflage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				8E4A20D8190E4B0F00BBA986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E4A20D9190E4B0F00BBA986 /* Build configuration list for PBXNativeTarget "CamouflageTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				8E4A20DB190E4B0F00BBA986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
