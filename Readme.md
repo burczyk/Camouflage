@@ -1,6 +1,6 @@
 ##Camouflage
 
-`Camouflage` is a category to NSData that allows you to store it as .bmp file in iOS Camera Roll and read it from there.
+`Camouflage` is a category of NSData that allows you to store it as .bmp file in iOS Camera Roll and read it from there.
 
 Camera Roll, Contacts and at some point Keychain are the only places where you can store and access data between apps.
 
