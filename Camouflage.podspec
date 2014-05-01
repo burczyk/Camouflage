@@ -4,12 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Read and write NSData to iOS Camera Roll as .bmp file and share it between apps!"
 
   s.description  = <<-DESC
-                   A longer description of Camouflage in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   Camouflage is a category of NSData that allows you to store it as .bmp file in iOS Camera Roll and read it from there. Camera Roll, Contacts and at some point Keychain are the only places where you can store and access data between apps. I figured out that you can store bytes as pixels in .bmp file and place it in Camera Roll and iOS will not protest ;)
                    DESC
 
   s.homepage     = "https://github.com/burczyk/Camouflage"

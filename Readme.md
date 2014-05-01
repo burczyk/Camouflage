@@ -136,9 +136,8 @@ We can extract it by just slicing `byte[]` array from a certain index to the end
 ###libbmp dependency
 Camouflage uses [libbmp](https://code.google.com/p/libbmp/) library to create .bmp file. Readme summary from project page:
 
-```
-libbmp is a simple, cross-platform, open source (revised LGPL) C library designed for easily reading, writing, and modifying Windows bitmap (BMP) image files. The library is oriented towards the novice programmer with little formal experience, but it is sufficiently capable for anybody who desires to do I/O and pixel operations on uncompressed 1, 4, 8, 16, 24, and 32 bpp (bits per pixel) BMP files.
-```
+> libbmp is a simple, cross-platform, open source (revised LGPL) C library designed for easily reading, writing, and modifying Windows bitmap (BMP) image files. The library is oriented towards the novice programmer with little formal experience, but it is sufficiently capable for anybody who desires to do I/O and pixel operations on uncompressed 1, 4, 8, 16, 24, and 32 bpp (bits per pixel) BMP files.
+
 
 ###License
 `Camouflage` is under `MIT license`, but `libbmp` has a `revised LGPL` one.
