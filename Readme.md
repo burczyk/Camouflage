@@ -123,7 +123,7 @@ Images from iOS Simulator are stored in a path:
 
 If you run the code above and find the newest file you can open it with hex editor, e.g. [hexfiend](http://ridiculousfish.com/hexfiend/).
 
-My file which graphical representation looks like this:
+[My file](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/IMG_0071.BMP) which graphical representation looks like this:
 ![Camera roll example](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/IMG_0071.png)
 
 when open in hexfiend looks like this:
