@@ -1,4 +1,4 @@
-##Camouflage
+## Camouflage
 
 `Camouflage` is a category of NSData that allows you to store it as .bmp file in iOS Camera Roll and read it from there.
 
@@ -6,7 +6,7 @@ Camera Roll, Contacts and at some point Keychain are the only places where you c
 
 I figured out that you can store bytes as pixels in .bmp file and place it in Camera Roll and iOS will not protest ;)
 
-###Usage
+### Usage
 There are just 2 methods:
 
 ```objective-c
@@ -19,7 +19,7 @@ First one stores data as .bmp file and returns `assetURL` of form `assets-librar
 
 Second one return stored data by given URL in completion block.
 
-###Use case
+### Use case
 **Share data between apps without sending it to the server!**
 
 Write NSData to Photo Library, get it's URL and pass it to other app by opening second app's specific URL with particular parameter, or just store a URL on the server, retrieve it in another app and open NSData written before from URL, e.g.:
@@ -33,7 +33,7 @@ Write NSData to Photo Library, get it's URL and pass it to other app by opening 
 
 **You don't need to be root to share data between apps!**
 
-###Installation
+### Installation
 Use [cocoapods](http://cocoapods.org/):
 
 ```
@@ -50,7 +50,7 @@ bmpfile.c
 ```
 into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 
-###Sample project
+### Sample project
 [CamouflageTest](https://github.com/burczyk/CamouflageTest) is a project that tests behavior of library, e.g.
 
 ```objective-c
@@ -62,7 +62,7 @@ into your project, add `AssetsLibrary.framework` as Linked Framework and play :)
 }];
 ```
 
-###Sample result
+### Sample result
 `CamouflageTest` has e.g. this method that downloads image from URL, saves it as NSData, restores it and shows it on the screen:
 
 ```objective-c
@@ -92,7 +92,7 @@ On the same time you Photo Library will have additional file, but remember it lo
 ![Camera Roll representation](https://raw.githubusercontent.com/burczyk/Camouflage/master/assets/camera_roll.png)
 
 
-###Algorithm
+### Algorithm
 [BMP](http://en.wikipedia.org/wiki/BMP_file_format) is probably the simplest image format. All you need to know is that it consists of a header and then array of pixels. Each single RGB element can have a value from range (0-255) so it can be represented as a byte. If we extract bytes from NSData and divide them into 3-component groups we can store each group as a single pixel!
 
 Each pixel is stored in a bitmap that has a `height=1` and `width=ceil(size/3)` and whole bitmap is saved in Camera Roll. As a result we get an assetURL we can use later to restore saved data.
@@ -133,13 +133,13 @@ As you see the whole text is stored inside, right after the header.
 We can extract it by just slicing `byte[]` array from a certain index to the end and that's how Camouflage is doing it.
 
 
-###libbmp dependency
+### libbmp dependency
 Camouflage uses [libbmp](https://code.google.com/p/libbmp/) library to create .bmp file. Readme summary from project page:
 
 > libbmp is a simple, cross-platform, open source (revised LGPL) C library designed for easily reading, writing, and modifying Windows bitmap (BMP) image files. The library is oriented towards the novice programmer with little formal experience, but it is sufficiently capable for anybody who desires to do I/O and pixel operations on uncompressed 1, 4, 8, 16, 24, and 32 bpp (bits per pixel) BMP files.
 
 
-###License
+### License
 `Camouflage` is under `MIT license`, but `libbmp` has a `revised LGPL` one.
 
 See `LICENSE` file for more info.
